@@ -2,6 +2,7 @@
 # Doc: https://pymysql.readthedocs.io/en/latest/
 import os
 import pymysql
+import pymysql.cursors
 
 TABLE_NAME = 'customers'
 
@@ -11,6 +12,7 @@ connection = pymysql.connect(
     password='1234',
     database='teste',
     charset='utf8mb4'
+    # cursorclass=pymysql.cursors.DictCursor
 )
 
 with connection:
